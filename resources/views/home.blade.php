@@ -14,7 +14,11 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <ul>
+                        @foreach (['users', 'departments', 'roles', 'permissions'] as $entity)
+                        <li><a href="/crud/{{ $entity }}/" target="_blank">list {{ $entity }}</a></li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
